@@ -15,43 +15,16 @@ import java.util.List;
 import java.util.Map;
 
 import junit.framework.TestCase;
-import net.entropysoft.transmorph.JDTConverter;
-import net.entropysoft.transmorph.IConverter;
-import net.entropysoft.transmorph.converters.ArrayToArray;
-import net.entropysoft.transmorph.converters.ArrayToCollection;
-import net.entropysoft.transmorph.converters.CharacterArrayToString;
-import net.entropysoft.transmorph.converters.CollectionToCollection;
-import net.entropysoft.transmorph.converters.DateToCalendar;
-import net.entropysoft.transmorph.converters.IdentityConverter;
-import net.entropysoft.transmorph.converters.MapToMap;
-import net.entropysoft.transmorph.converters.NumberToNumber;
-import net.entropysoft.transmorph.converters.ObjectToString;
-import net.entropysoft.transmorph.converters.StringToBoolean;
-import net.entropysoft.transmorph.converters.StringToCharacterArray;
-import net.entropysoft.transmorph.converters.StringToClass;
-import net.entropysoft.transmorph.converters.StringToEnum;
-import net.entropysoft.transmorph.converters.StringToFile;
-import net.entropysoft.transmorph.converters.StringToNumber;
-import net.entropysoft.transmorph.converters.StringToURL;
-import net.entropysoft.transmorph.converters.beans.MapToBean;
+import net.entropysoft.transmorph.DefaultConverters;
+import net.entropysoft.transmorph.JDTTransmorph;
 import net.entropysoft.transmorph.plugin.test.JavaTestProject;
 
 import org.eclipse.jdt.core.IMethod;
 import org.eclipse.jdt.core.IType;
 
-public class ConverterTest extends TestCase {
+public class JDTTransmorphTest extends TestCase {
 
-	public void testConverter() throws Exception {
-		IConverter[] converters = new IConverter[] { new NumberToNumber(),
-				new StringToNumber(), new StringToBoolean(),
-				new StringToEnum(), new StringToClass(),
-				new ArrayToArray(), new MapToMap(),
-				new ArrayToCollection(),
-				new CollectionToCollection(), new StringToFile(),
-				new StringToURL(), new CharacterArrayToString(),
-				new StringToCharacterArray(), new ObjectToString(),
-				new DateToCalendar(), new MapToBean(),
-				new IdentityConverter() };
+	public void testJDTTransmorph() throws Exception {
 
 		JavaTestProject javaTestProject = new JavaTestProject("testConverter");
 		javaTestProject.createFromTemplate("templates/simpleConvertTest");
@@ -60,7 +33,8 @@ public class ConverterTest extends TestCase {
 		IMethod method = javaTestProject.getMethod(type, "setListOfInts");
 		String parameterType = method.getParameterTypes()[0]; // QList<QInteger;>;
 
-		JDTConverter eclipseConverter = new JDTConverter(ConverterTest.class.getClassLoader(), converters);
+		JDTTransmorph eclipseConverter = new JDTTransmorph(JDTTransmorphTest.class
+				.getClassLoader(), new DefaultConverters());
 		List<Integer> listOfInts = (List<Integer>) eclipseConverter.convert(
 				new String[] { "1", "2", "3" }, type, parameterType);
 		assertNotNull(listOfInts);
