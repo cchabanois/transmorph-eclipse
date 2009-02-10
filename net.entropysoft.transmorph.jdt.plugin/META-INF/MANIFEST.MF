@@ -1,21 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Transmorph
-Bundle-SymbolicName: net.entropysoft.transmorph.plugin;singleton:=true
-Bundle-Version: 1.1.0
+Bundle-Name: Transmorph JDT
+Bundle-SymbolicName: net.entropysoft.transmorph.jdt.plugin;singleton:=true
+Bundle-Version: 2.0.0
 Bundle-Activator: net.entropysoft.transmorph.plugin.Activator
 Bundle-Vendor: EntropySoft
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.jdt.core;bundle-version="3.3.0"
+ org.eclipse.jdt.core;bundle-version="3.3.0",
+ net.entropysoft.transmorph.plugin;bundle-version="2.0.0"
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Eclipse-LazyStart: true
-Bundle-ClassPath: .,
- transmorph-1.1.0.jar
+Bundle-ClassPath: .
 Export-Package: net.entropysoft.transmorph,
- net.entropysoft.transmorph.converters,
- net.entropysoft.transmorph.converters.beans,
- net.entropysoft.transmorph.modifiers,
  net.entropysoft.transmorph.plugin,
- net.entropysoft.transmorph.plugin.utils,
- net.entropysoft.transmorph.signature,
- net.entropysoft.transmorph.type
+ net.entropysoft.transmorph.plugin.utils

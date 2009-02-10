@@ -16,30 +16,30 @@ import net.entropysoft.transmorph.type.TypeFactory;
 import org.eclipse.jdt.core.IType;
 
 /**
- * JDTConverter adds a method to Converter that can convert an object to an
+ * JDTTransmorph adds a method to Transmorph that can convert an object to an
  * unresolved eclipse signature in the context of an owningType
  * 
  * <p>
- * By default, JDTConverter does not use internal form fully qualified names
+ * By default, JDTTransmorph does not use internal form fully qualified names
  * but the dotted form qualified names
  * </p>
  * 
  * @author Cedric Chabanois (cchabanois at gmail.com)
  * 
  */
-public class JDTConverter extends Converter {
+public class JDTTransmorph extends Transmorph {
 
-	public JDTConverter(ClassLoader classLoader, IConverter converters[]) {
+	public JDTTransmorph(ClassLoader classLoader, IConverter... converters) {
 		super(classLoader, converters);
 		setUseInternalFormFullyQualifiedName(false);
 	}
 
-	public JDTConverter(IConverter converters[]) {
+	public JDTTransmorph(IConverter converters[]) {
 		super(converters);
 		setUseInternalFormFullyQualifiedName(false);
 	}
 
-	public JDTConverter(TypeFactory typeFactory, IConverter converters[]) {
+	public JDTTransmorph(TypeFactory typeFactory, IConverter... converters) {
 		super(typeFactory, converters);
 		setUseInternalFormFullyQualifiedName(false);
 	}
