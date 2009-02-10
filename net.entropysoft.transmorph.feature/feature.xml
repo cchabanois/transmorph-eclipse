@@ -2,15 +2,19 @@
 <feature
       id="net.entropysoft.transmorph.feature"
       label="Transmorph"
-      version="1.1.0"
+      version="2.0.0"
       provider-name="EntropySoft">
 
    <description url="http://transmorph.sourceforge.net/">
       Transmorph is a java library used to convert a Java object of one type into an object of another type (with another signature, possibly parameterized).
    </description>
 
-   <copyright url="http://www.example.com/copyright">
-      [Enter Copyright Description here.]
+   <copyright url="http://www.entropysoft.net">
+      Copyright (c) 2007-2008 EntropySoft SAS. 
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License
+v1.0 which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
    </copyright>
 
    <license url="http://www.eclipse.org/legal/epl-v10.html">
@@ -215,10 +219,18 @@ litigation.
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.jdt.core" version="3.3.0" match="greaterOrEqual"/>
+      <import plugin="net.entropysoft.transmorph.plugin" version="2.0.0" match="greaterOrEqual"/>
    </requires>
 
    <plugin
          id="net.entropysoft.transmorph.plugin"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="net.entropysoft.transmorph.jdt.plugin"
          download-size="0"
          install-size="0"
          version="0.0.0"
