@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Transmorph
 Bundle-SymbolicName: net.entropysoft.transmorph.plugin;singleton:=true
-Bundle-Version: 2.0.0
+Bundle-Version: 2.2.0
 Bundle-Vendor: EntropySoft
 Export-Package: net.entropysoft.transmorph,
  net.entropysoft.transmorph.cache,
