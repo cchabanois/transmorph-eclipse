@@ -11,6 +11,7 @@
 package net.entropysoft.transmorph;
 
 import net.entropysoft.transmorph.plugin.utils.TypeUtil;
+import net.entropysoft.transmorph.signature.parser.ClassFileTypeSignatureParser;
 import net.entropysoft.transmorph.type.TypeFactory;
 
 import org.eclipse.jdt.core.IType;
@@ -31,17 +32,23 @@ public class JDTTransmorph extends Transmorph {
 
 	public JDTTransmorph(ClassLoader classLoader, IConverter... converters) {
 		super(classLoader, converters);
-		setUseInternalFormFullyQualifiedName(false);
+		ClassFileTypeSignatureParser typeSignatureParser = new ClassFileTypeSignatureParser();
+		typeSignatureParser.setUseInternalFormFullyQualifiedName(false);
+		setTypeSignatureParser(typeSignatureParser);
 	}
 
 	public JDTTransmorph(IConverter converters[]) {
 		super(converters);
-		setUseInternalFormFullyQualifiedName(false);
+		ClassFileTypeSignatureParser typeSignatureParser = new ClassFileTypeSignatureParser();
+		typeSignatureParser.setUseInternalFormFullyQualifiedName(false);
+		setTypeSignatureParser(typeSignatureParser);
 	}
 
 	public JDTTransmorph(TypeFactory typeFactory, IConverter... converters) {
 		super(typeFactory, converters);
-		setUseInternalFormFullyQualifiedName(false);
+		ClassFileTypeSignatureParser typeSignatureParser = new ClassFileTypeSignatureParser();
+		typeSignatureParser.setUseInternalFormFullyQualifiedName(false);
+		setTypeSignatureParser(typeSignatureParser);
 	}
 
 	public Object convert(Object source, IType owningType,
