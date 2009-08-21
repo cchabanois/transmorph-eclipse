@@ -10,7 +10,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;bundle-version="3.4.1",
  org.eclipse.jdt.core;bundle-version="3.4.2",
  org.eclipse.jdt.launching;bundle-version="3.4.1",
- net.entropysoft.transmorph.plugin;bundle-version="1.1.0",
- net.entropysoft.transmorph.jdt.plugin;bundle-version="1.1.0"
+ net.entropysoft.transmorph.jdt.plugin;bundle-version="2.2.1",
+ net.entropysoft.transmorph;bundle-version="2.2.1"
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Eclipse-LazyStart: true

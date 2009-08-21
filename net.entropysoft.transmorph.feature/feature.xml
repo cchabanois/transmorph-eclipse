@@ -2,7 +2,7 @@
 <feature
       id="net.entropysoft.transmorph.feature"
       label="Transmorph"
-      version="2.2.0"
+      version="2.2.1"
       provider-name="EntropySoft">
 
    <description url="http://transmorph.sourceforge.net/">
@@ -219,17 +219,18 @@ litigation.
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.jdt.core" version="3.3.0" match="greaterOrEqual"/>
-      <import plugin="net.entropysoft.transmorph.plugin" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="net.entropysoft.transmorph" version="2.2.1" match="greaterOrEqual"/>
    </requires>
 
    <plugin
-         id="net.entropysoft.transmorph.plugin"
+         id="net.entropysoft.transmorph.jdt.plugin"
          download-size="0"
          install-size="0"
-         version="0.0.0"/>
+         version="0.0.0"
+         unpack="false"/>
 
    <plugin
-         id="net.entropysoft.transmorph.jdt.plugin"
+         id="net.entropysoft.transmorph"
          download-size="0"
          install-size="0"
          version="0.0.0"
