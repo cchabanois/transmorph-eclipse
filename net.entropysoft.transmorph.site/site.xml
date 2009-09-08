@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
+   <description name="transmorph update site" url="http://transmorph.sourceforge.net/updatesite">
+      This site contains plugin and features for Transmorph.
+   </description>
    <feature url="features/net.entropysoft.transmorph.feature_2.2.2.jar" id="net.entropysoft.transmorph.feature" version="2.2.2"/>
 </site>
