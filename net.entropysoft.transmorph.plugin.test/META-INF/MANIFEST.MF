@@ -6,11 +6,11 @@ Bundle-Version: 1.0.0
 Bundle-Activator: net.entropysoft.transmorph.plugin.test.Activator
 Bundle-Vendor: EntropySoft
 Require-Bundle: org.eclipse.core.runtime,
- org.junit;bundle-version="3.8.2",
  org.eclipse.core.resources;bundle-version="3.4.1",
  org.eclipse.jdt.core;bundle-version="3.4.2",
  org.eclipse.jdt.launching;bundle-version="3.4.1",
- net.entropysoft.transmorph.jdt.plugin;bundle-version="2.2.1",
- net.entropysoft.transmorph;bundle-version="2.2.1"
+ net.entropysoft.transmorph.jdt.plugin;bundle-version="3.0.0",
+ net.entropysoft.transmorph;bundle-version="3.0.0",
+ org.junit4;bundle-version="4.5.0"
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Eclipse-LazyStart: true

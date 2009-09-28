@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Transmorph JDT
 Bundle-SymbolicName: net.entropysoft.transmorph.jdt.plugin;singleton:=true
-Bundle-Version: 2.2.2
+Bundle-Version: 3.0.0
 Bundle-Activator: net.entropysoft.transmorph.plugin.Activator
 Bundle-Vendor: EntropySoft
 Require-Bundle: org.eclipse.core.runtime,
@@ -11,6 +11,5 @@ Require-Bundle: org.eclipse.core.runtime,
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Eclipse-LazyStart: true
 Bundle-ClassPath: .
-Export-Package: net.entropysoft.transmorph;uses:="org.eclipse.jdt.core,net.entropysoft.transmorph.type",
- net.entropysoft.transmorph.plugin;uses:="org.eclipse.core.runtime,org.osgi.framework",
+Export-Package: net.entropysoft.transmorph.plugin;uses:="org.eclipse.core.runtime,org.osgi.framework",
  net.entropysoft.transmorph.plugin.utils;uses:="org.eclipse.jdt.core"

@@ -4,4 +4,5 @@
       This site contains plugin and features for Transmorph.
    </description>
    <feature url="features/net.entropysoft.transmorph.feature_2.2.2.jar" id="net.entropysoft.transmorph.feature" version="2.2.2"/>
+   <feature url="features/net.entropysoft.transmorph.feature_3.0.0.jar" id="net.entropysoft.transmorph.feature" version="3.0.0"/>
 </site>
