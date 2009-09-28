@@ -18,7 +18,6 @@ public class JDTTypeSignatureParser implements ITypeSignatureParser {
 	private IType owningType;
 	private String unresolvedSignature;
 	
-	@Override
 	public FullTypeSignature parseTypeSignature()
 			throws InvalidSignatureException {
 		ClassFileTypeSignatureParser typeSignatureParser = new ClassFileTypeSignatureParser();
@@ -36,7 +35,6 @@ public class JDTTypeSignatureParser implements ITypeSignatureParser {
 		this.owningType = owningType;
 	}
 	
-	@Override
 	public void setTypeSignature(String signature) {
 		this.unresolvedSignature = signature;
 	}
