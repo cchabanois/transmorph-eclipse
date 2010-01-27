@@ -219,7 +219,7 @@ litigation.
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.jdt.core" version="3.3.0" match="greaterOrEqual"/>
-      <import plugin="net.entropysoft.transmorph" version="2.2.1" match="greaterOrEqual"/>
+      <import plugin="net.entropysoft.transmorph" version="3.0.2" match="greaterOrEqual"/>
    </requires>
 
    <plugin
