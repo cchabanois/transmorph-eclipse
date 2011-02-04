@@ -2,7 +2,7 @@
 <feature
       id="net.entropysoft.transmorph.feature"
       label="Transmorph"
-      version="3.0.3"
+      version="3.1.1"
       provider-name="EntropySoft">
 
    <description url="http://transmorph.sourceforge.net/">
